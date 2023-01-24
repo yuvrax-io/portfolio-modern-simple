@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+:root {
+  --background-color: #efe7e5;
+  --text-color: black;
+}
+
+body {
+  margin: 3% 15%;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+p {
+  line-height: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  list-style-type: none;
+  font-weight: 500;
+}
+nav li {
+  position: relative;
+  margin-left: 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+nav li span {
+  position: absolute;
+  top: -5px;
+  right: -28px;
+}
+
+header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+header .header-left {
+  flex: 6;
+  margin-right: 50px;
+}
+header .header-left small {
+  font-weight: bold;
+  display:flex;
+  align-items:center;
+}
+header .header-left h1 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top:15px;
+}
+header .header-left .links {
+  margin-top: 80px;
+}
+header .header-left .links a {
+  text-decoration:none;
+  color:inherit;
+  position: relative;
+  margin-right: 40px;
+  font-weight: bold;
+}
+header .header-left .links a span {
+  position: absolute;
+  top: -5px;
+  right: -28px;
+}
+header .header-right {
+  flex: 5;
+}
+header .header-right img{
+  width: 100%;
+  border-radius: 50%;
+  
+}
+header .header-right img:hover{
+  filter: blur(5px);
+  opacity: 0.5;
+  
+}
+
+}
+.about {
+  margin-top: 150px;
+}
+.about .signature {
+  width: 30%;
+  background-color: #efe7e5;
+}
+.signature:hover{
+  filter: invert(100%);
+}
+.about p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.images {
+  margin-top: 60px;
+}
+.images .image-card {
+  display:flex;
+  align-items:center;
+  margin-bottom: 60px;
+}
+.images .image-card .image-left {
+  margin-right: 40px;
+}
+.images .image-card .image-left :hover{
+  opacity: 0.8;
+}
+.images .image-card .image-left img {
+  height: 200px;
+  width: 400px;
+}
+
+footer {
+  
+ margin-top: 100px;
+}
+footer p {
+  animation-name: text-anim;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  text-align: right;
+  font-family: arial;
+  color: nlack;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000,
+    0 0 40px #000;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@keyframes text-anim {
+  from {
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000,
+      0 0 40px #000;
+    color: white;
+  }
+  to {
+    text-shadow: 0 0 5px gray, 0 0 10px #000, 0 0 20px black,
+      0 0 100px black;
+  }
+}
+
+
+@media screen and (max-width: 880px) {
+  .images .image-card {
+    flex-wrap:wrap;
+  }
+}
+
+@media screen and (max-width: 621px) {
+  header {
+    flex-direction: column-reverse
+  }
+  header .header-left {
+    margin-right: 0;
+  }
+  header .header-right {
+    margin-bottom: 40px;
+  }
+  header .header-right img {
+    width: 250px;
+  }
+
+  .images .image-card .image-left img {
+    width: 100%;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: clamp(2rem, 2.8vw, 5rem);
+  font-family: Raleway;
+  font-weight: bold;
+}
+
+.typewriter {
+  width: 10ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid #212121;
+  animation: cursor 10s step-start infinite, 
+    text 10s steps(20) alternate infinite,
+    blink-caret .75s step-end infinite;;
+}
+
+@keyframes cursor {
+  0%, 100% { 
+    border-color: #212121; 
+  }
+}
+
+@keyframes text {
+  0% { 
+    width: 0; 
+  }
+  100% { 
+    width: 15ch; 
+  }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
